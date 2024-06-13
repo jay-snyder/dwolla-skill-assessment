@@ -7,29 +7,29 @@ permissions:
 
 jobs:
   run-tests:
-  name: "Run Tests"
-  runs-on: ubuntu-latest
+    name: "Run Tests"
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: 'Checkout Branch'
-    uses: actions/checkout@v4
+    steps:
+    - name: 'Checkout Branch'
+      uses: actions/checkout@v4
 
-  - name: "Setup Python"
-    uses: actions/setup-python@v5
-    with:
-      python-version: 3.9
+    - name: "Setup Python"
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.9
 
-  - name: "Setup Terraform"
-    uses: hashicorp/setup-terraform@v3
+    - name: "Setup Terraform"
+      uses: hashicorp/setup-terraform@v3
 
-  - name: "Python: Test Handler"
-    run: |
-      python ./src/test_get_current_time.py
+    - name: "Python: Test Handler"
+      run: |
+        python ./src/test_get_current_time.py
 
-  - name: "Terraform: Validate"
-    run: |
-      terraform validate
+    - name: "Terraform: Validate"
+      run: |
+        terraform validate
 
-  - name: "Terraform: Run Tests"
-    run: |
-      terraform test
+    - name: "Terraform: Run Tests"
+      run: |
+        terraform test
