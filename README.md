@@ -1,17 +1,5 @@
-# dwolla-skill-assessment
+# get-current-time
 
-```
-Instructions:
+Uses Terraform to stand up a simple AWS lambda that when executed, returns the current timestamp in JSON format.
 
-Complete the problem in the language of your choosing.
-
-Upload your solution to Github
-
-Use Github Actions to show your tests pass
-
-Problem Definition:
-
-Create a lambda function in AWS that returns the current time as JSON data, such as: { "currentTime": "2050-01-24 15:06:26" }
-
-Using IaC, define the infrastructure necessary to deploy and run the function in AWS.
-```
+A GHA workflow is included that runs some simple tests for both the lambda response and the infrastructure configuration. The action can be run manually, in addition to automatically on `push`.
