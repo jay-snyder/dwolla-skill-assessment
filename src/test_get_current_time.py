@@ -1,4 +1,4 @@
-from src.get_current_time import handler
+from get_current_time import handler
 from unittest.mock import patch, Mock
 
 
