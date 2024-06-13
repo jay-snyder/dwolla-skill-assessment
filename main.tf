@@ -1,5 +1,5 @@
 locals {
-  lambda_name   = "getCurrentTime"
+  lambda_name   = "get_current_time"
 }
 
 data "aws_iam_policy_document" "assume_role" {
