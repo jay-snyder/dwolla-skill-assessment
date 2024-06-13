@@ -26,6 +26,10 @@ jobs:
       run: |
         python ./src/test_get_current_time.py
 
+    - name: "Terraform: Initialize"
+      run: |
+        terraform init
+
     - name: "Terraform: Validate"
       run: |
         terraform validate
